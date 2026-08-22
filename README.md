@@ -1,8 +1,8 @@
 # TJ++ Logic Engine: Cognitive Auditing for Natural Language
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22057917.svg)](https://doi.org/10.5281/zenodo.22057917)
-
 The TJ++ Logic Engine is a deterministic, content-opaque framework that models natural language texts as directed dependency graphs to mathematically audit structural soundness, enforce cognitive coherence, and mitigate AI hallucinations. 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22057917.svg)](https://doi.org/10.5281/zenodo.22057917)
 
 Because the engine is completely content-opaque—treating concepts and dependencies as abstract mathematical structures—the raw PDF whitepaper functions directly as the source code, while any sufficiently advanced Large Language Model (LLM) acts as the compiler and runtime environment.
 
@@ -12,7 +12,7 @@ Because the engine is completely content-opaque—treating concepts and dependen
 
 You do not need to write any custom code or maintain a software pipeline to use this framework. To execute a structural audit, simply follow these steps:
 
-1. **Prime the LLM**: Upload the `tj_plus_plus_whitepaper_v45.pdf` or paste the contents of the `TJ++_Revised.md` specification file into your LLM's active prompt window.
+1. **Prime the LLM**: Upload the `tj_plus_plus_whitepaper_v45.pdf` or the `TJ++_Revised.md` specification file directly into your LLM's chat window (or paste the text if you prefer).
 2. **Confirm Compilation**: Wait for the LLM to acknowledge the paper's mathematical definitions and logic layers.
 3. **Execute the Audit**: Paste your text and run the following command:
    > *"Let's TJ++ the following draft paragraph."*
