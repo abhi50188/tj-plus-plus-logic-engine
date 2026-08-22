@@ -1,5 +1,7 @@
 # TJ++ Logic Engine: Cognitive Auditing for Natural Language
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22057917.svg)](https://doi.org/10.5281/zenodo.22057917)
+
 The TJ++ Logic Engine is a deterministic, content-opaque framework that models natural language texts as directed dependency graphs to mathematically audit structural soundness, enforce cognitive coherence, and mitigate AI hallucinations. 
 
 Because the engine is completely content-opaque—treating concepts and dependencies as abstract mathematical structures—the raw PDF whitepaper functions directly as the source code, while any sufficiently advanced Large Language Model (LLM) acts as the compiler and runtime environment.
