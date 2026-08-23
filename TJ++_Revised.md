@@ -31,8 +31,7 @@ underlying shape of what the existing process already does:
   conceptual framework, methodology, and findings are the legs of the
   journey from that starting point toward the conclusion, and the conclusion
   has to lead back and close the loop on the original problem. Each axis is,
-  in effect, checking that one leg of that journey is passable. The grading
-  already does this — this note just names the shape underneath it.
+  in effect, checking that one leg of that journey is passable.
 
 ## How to invoke it
 
@@ -79,19 +78,14 @@ is that nothing here gets skipped, it gets shared.
 Everything above covers the four-layer core. The full pipeline extends
 past it: pairing completeness and CSF order ride alongside non-crossing
 (same layer, narrower scope), and the external dependency check extends
-CSF order the same way — run on request, not by default. Cross-student
-convergence runs separately, once per grading cycle, not per response.
-Requirement-
-response runs last on every individual response, every time. Round-
-count is self-triggered, situational — it only fires when the
-assistant's own exchange starts circling. Minimal-basis runs once,
-immediately after requirement-response — that's its real dependency,
-since requirement-response is reused inside its own recursion — not
-after cross-student convergence or round-count, neither of which feeds
-into it or is fed by it. Oracle-splay runs once more after that — the
-true final step, only after minimal-basis has already fixed the node
-set, checking whether that final set's actual position in the piece
-matches what an idealized version of the same argument would produce.
+CSF order the same way — run on request, not by default. Requirement-
+response runs last on every individual response, every time. Minimal-basis
+runs once, immediately after requirement-response — that's its real
+dependency, since requirement-response is reused inside its own
+recursion. Oracle-splay runs once more after that — the true final step,
+only after minimal-basis has already fixed the node set, checking whether
+that final set's actual position in the piece matches what an idealized
+version of the same argument would produce.
 
 ## Reporting the net result
 
@@ -105,15 +99,6 @@ also run and is also silent too. Never report a check's result mid-pass as
 if it settled the question; the only thing worth saying out loud is what's
 left standing once the whole pass is done.
 
-## Beyond grading: open arguments and debates
-
-The same idea applies to a topic that doesn't have a document yet — "let's
-debate mindfulness." Lay out the nodes (the facets worth arguing:
-definitions, evidence for and against, mechanisms, populations, critiques)
-and check whether you can travel from premise to conclusion through them
-without a gap — every claim supported, every claim leading somewhere, no
-facet left dangling.
-
 ## Node-sourcing check (layer zero — runs before the four-layer pass, produces the node model everything else uses)
 
 Why this exists: none of the four layers can catch a bad node model —
@@ -124,10 +109,9 @@ should be one, or one thing that should be two — every check downstream
 faithfully verifies a broken map and reports it as clean.
 
 What it catches: nodes drawn from the phrasing of a draft in progress
-instead of from the actual external source — the exact failure that let
-one gradebook requirement (a discussion post plus two peer replies on two
-separate days) get split into two disconnected asks, one of which then
-drifted onto the wrong week entirely.
+instead of from the actual external source — the exact failure that lets
+one external requirement get incorrectly split into two disconnected asks,
+or drift onto the wrong item entirely.
 
 How to run it: before drafting anything, walk the actual source directly —
 one rubric line, one gradebook row, one plan item — and make each one
@@ -139,12 +123,13 @@ rule). The test: would satisfying one candidate node without the other
 actually count as complete, under the real standard being applied? If no,
 they're one node — merge them. If yes, they're genuinely separate.
 
-Worked example: "Week 8: Discussion — /40" is one gradebook row, so it's
-one node, and that node's content is whatever the assignment actually
-requires (post + two peer replies on two separate days) — not two nodes to
-be independently rediscovered while drafting. Compare to "Week 8:
-Discussion" and "Week 5: Discussion" — different rows, independently due,
-independently graded — correctly two separate nodes.
+Worked example: "Submit a project proposal covering budget, timeline, and
+risk" is one rubric line, so it's one node, and that node's content is
+whatever the requirement actually specifies (all three components) — not
+three nodes to be independently rediscovered while drafting. Compare to
+"Submit a proposal" and "Submit a status update" — different rubric
+lines, independently due, independently graded — correctly two separate
+nodes.
 
 Limits: this only works cleanly when there's a real external source to
 walk (a rubric, a gradebook, a written plan). For genuinely open arguments
@@ -371,7 +356,7 @@ Run this on every pass, not just ones that look branching at a glance. A
 truly straight-line reply (post → citation → citation → citation →
 nudge → question) can't loop by construction — but whether a piece is
 truly straight-line isn't always obvious from a first read, and
-rambling or unusually organized student work can bury a cross-reference
+rambling or unusually organized writing can bury a cross-reference
 that only shows up once you actually trace the dependencies. Since the
 crossing check, this check, and the Laplacian check now run as one
 combined pass, skipping ahead of time based on appearance doesn't save
@@ -497,101 +482,15 @@ Use this when something feels off or stakes are higher. TJ++ alone covers most c
 **Standing checks — run every time, regardless of context.** The basis vector itself is dynamic: which nodes matter is derived fresh from the context each run, never fixed upfront. But two checks are properties of the circuit-check mechanism itself, not of any particular context, so they apply on every single pass, for every node, with no exception and no judgment call about whether they're needed this time:
 
 - **Example nodes** — every content node should carry an example node alongside it. The form the example takes depends on the context: if the basis includes a document, the example is the relevant section of that document; if not, it is a concrete illustration. A content node with no example alongside it is an open circuit — the eigen will be high and the shift vector will catch it.
-- **Plain language** — say it in the fewest words that land. If a sentence needs unpacking to understand, it is an open circuit — regardless of how well-anchored the node otherwise is. A node can be fully supported (example present, citation correct, argument sound) and still register as an open circuit on this check alone if the phrasing makes the reader work to parse it (e.g., compound-noun stacks like "anchor building blocks" instead of "building blocks"). **One job per sentence** is the sentence-level instance of this same check: a citation sentence that both states the finding and bridges it to the specific example in one breath — usually signaled by a trailing "which," "a dynamic that," or "a pattern that" clause — is doing two jobs at once and should split into two sentences, one job each (state the finding, then a short sentence bridging it to the example). This is not new length overhead; it is the same total content, just not stacked in one clause. The Zachary voice anchor already does this (see Example_Para.docx: "Hunt et al. (2018) documented... These outcomes suggest...").
+- **Plain language** — say it in the fewest words that land. If a sentence needs unpacking to understand, it is an open circuit — regardless of how well-anchored the node otherwise is. A node can be fully supported (example present, citation correct, argument sound) and still register as an open circuit on this check alone if the phrasing makes the reader work to parse it (e.g., compound-noun stacks like "anchor building blocks" instead of "building blocks"). **One job per sentence** is the sentence-level instance of this same check: a citation sentence that both states the finding and bridges it to the specific example in one breath — usually signaled by a trailing "which," "a dynamic that," or "a pattern that" clause — is doing two jobs at once and should split into two sentences, one job each (state the finding, then a short sentence bridging it to the example). This is not new length overhead; it is the same total content, just not stacked in one clause.
 
 These two are checked on every TJ++ or basis-shift pass by default — not something to remember to add when a draft "feels off." Treat them the same as reading the basis document itself: a required step, not an optional add-on.
 
 **Cost:** moderate — building the basis vector means reading the full context once, but the shift itself is just a set diff after that. Reusing node-sourcing's model where one already exists avoids a second full read.
 
-## Eigen-revealed walls (BEF discussion gate)
-
-A wall caught during Step 3 of the Disc Spin mechanism (the original Fit/draft
-attempt) is handled as always — greedy, drop it, move on, no discussion
-needed. That mechanism is unchanged.
-
-A different case: a citation survives Step 3, gets drafted in, and only the
-TJ++ or basis-shift circuit check reveals it doesn't actually hold up
-(topical misfit, or fails a standing check badly enough to be
-unsalvageable). Call this an **eigen-revealed wall**. When this happens —
-regardless of how many citations remain afterward, even if 1 or 2 survive,
-not just at 0 — it opens a **discussion gate**: does adding BEF as a
-strengthening citation genuinely add weight to this specific reply, or not?
-This is never automatic. BEF only gets added if the discussion concludes
-it's actually load-bearing for the argument — same hard-gate discipline as
-the review-before-commit rule, one layer deeper.
-
-Scope: this applies to the slow, one-at-a-time, eigen-reviewed workflow
-(small batches, full TJ++ pass per student) — not the fast batch-processing
-default the Disc README's Spin mechanism is built for. The original "no
-swap-in bridges, BEF reserved for 3-wall only" restriction exists to
-protect batch-speed and corpus-diversity at scale; those costs don't bind
-the same way when every draft already gets this much scrutiny. In fast
-batch mode, the original rule stands unchanged.
-
-## Cross-student convergence check (separate pass — runs once per grading cycle, across the cohort, reuses the Laplacian layer only)
-
-**Generalization note:** "student" is the object this check was first
-written for, not a hard requirement — the same move applies to any set of
-comparable instances sharing a template (documents, submissions, mirrored
-reference files), as long as corresponding node positions can be
-identified across them. Read "student" as "instance." Don't reinvent this
-check under a new name just because the object changed.
-
-The four layers above check whether one student's argument holds together.
-This one checks whether two students have converged on the same territory —
-the originality-risk question, not the coherence question. Applies once per
-cycle after some or all students have a state entry, not during any
-individual student's own TJ++ pass.
-
-**Trigger: ask, don't self-initiate.** Unlike the other standing checks in
-this document, this one doesn't fire on its own. The reason to run it isn't
-fixed to one context — it could be a grading pass, or it could just be a
-hunch that two students' posts sound alike — but either way, that reason has
-to come from outside the check itself; nothing about a single student's
-entry says "go compare this to the cohort." Ask first ("want me to run the
-cross-student convergence check on the cohort so far?") and only run it once
-the answer is yes. This is the one exception to the rest of this document's
-"run it without being asked" discipline, because the need for it is
-genuinely situational — it depends on why you're looking, not on anything
-detectable in the draft in front of you the way the other checks can be.
-
-**Why Laplacian only, not Jacobian:** Jacobian needs real dependency — one
-claim needing another to resolve. No such relationship exists between
-independent students; neither one's problem needs the other's to make sense.
-Laplacian only ever needed an undirected match relationship, so it's built
-directly from "these two students match," skipping Jacobian entirely.
-
-**Which nodes:** population and the CSF pair from the business problem.
-Nothing else. Framework is ruled out — popular theories (Transformational
-Leadership, Kotter, etc.) get reused across unrelated topics constantly, so
-a framework match carries no signal. Research question is ruled out too —
-it's structurally just population and CSF restated inside the required
-template sentence, so checking it again double-counts instead of adding
-anything.
-
-**How to run it:** each student is a plane; population and CSF sit at fixed
-positions on every plane since the template is shared. Build two separate
-match-graphs, one per node: for each pair of students, mark a match (0) or
-no match (−1) on population, and separately on CSF pair. Every student gets
-checked against every other student directly — not sequentially, not
-against one fixed reference — so the result doesn't depend on roster order.
-
-**Reading it:** run Laplacian on each graph separately. A block that's
-mostly −1 is healthy — spread out, low convergence. Students landing in the
-same connected piece on the CSF graph is a signal on its own; landing
-together on the population graph too, in the same pass, is a stronger one —
-that's the AND combination, the real flag. Report all three: population-only
-matches, CSF-only matches, and the AND-combined flag. Combined is what's
-worth a mentor's attention; either column alone is lower confidence but
-still worth surfacing as context.
-
-**Cost:** cheap — both fields are categorical, no decimals or word-overlap
-scoring needed, just match or not.
-
 ## Requirement-response check (final step — every response, every time, run last)
 
-Same two-plane framing as the cross-student convergence check above, just at
-cohort size two instead of N: the source — a question, a rubric, an email,
+Two-plane framing: the source — a question, a rubric, an email,
 or an implicit schema (the generic, unwritten shape of a complete answer,
 even with no formal prompt behind it — see the note on this under the
 basis-shift circuit check) — is one plane, the response is the other. The
@@ -626,8 +525,7 @@ top of what was asked. Decide each one before reporting; only the real gaps
 and the real drift are worth surfacing, same net-result discipline as the
 rest of TJ++.
 
-**Where this sits:** run it last, after the four-layer pass and after
-that cycle's cross-student convergence pass (if one has already run),
+**Where this sits:** run it last, after the four-layer pass,
 on every response, every time — not
 optional, not something to skip because a draft looks complete. Everything
 before this step checks whether the response holds together on its own
@@ -638,33 +536,17 @@ confirm nothing got missed and nothing got added that doesn't belong.
 built for the basis-shift circuit check, just positioned as the closing
 move instead of a mid-pass layer.
 
-## Round-count check (self-referential — flags drift in the assistant's own exchange, not the work being reviewed)
-
-Why this exists: every other check in this document runs on a finished draft or a source document. This one runs on the assistant's own back-and-forth, because the same redundant-node and reopened-thread failures that show up in student work can just as easily show up in how the assistant is responding — and nothing else in this document is positioned to catch that, since it all assumes the object being checked is someone else's writing.
-
-What it catches: the assistant re-answering the same underlying question multiple times, each time defending a narrower technical point than the one actually being asked, while believing each round is progress. The tell is round count, not content — if the same topic is still open after about three exchanges, the issue usually isn't that the answer is wrong, it's that the closes aren't landing on the real thread.
-
-Trigger: more than ~3 rounds of back-and-forth on one point within a single topic, or noticing the same hedge repeating ("not this, not that") without the thread actually resolving. This is meant to be self-initiated — the assistant notices the round count and says so ("we seem to be circling on this, want to run the check?") rather than waiting to be sent back to it, the same way every other standing check in this document runs without being asked.
-
-How to run it: pause and treat the assistant's own last several turns as the document. Build the node model of what was actually asked (one question, usually), then run non-crossing (did the thread close and reopen more than once?) and requirement-response (did the reply deliver more than the question asked for?) against it. A thread that reopened repeatedly, or answers that grew more elaborate than the question warranted, is the flag.
-
-Worked example: a Wk9 exchange over whether a population/outcome pair formed a Jacobian loop. The substantive answer (no cycle) was correct after the first pass; four more rounds followed re-litigating matrix construction details the question never asked about — round count alone would have flagged this before content review was needed.
-
-Limits: this check flags that an exchange has stopped converging — it doesn't determine who was right. Use it to trigger a stop-and-recheck, not as a verdict. Round count alone can't distinguish a reopened thread from a long but genuinely-converging exchange, so use a concrete test rather than the count by itself: did this round change the actual conclusion, or only the wording defending the same conclusion already given? If the answer at round four is the same as the answer at round one and only the justification changed, that's a reopened thread. If the answer itself changed — a new fact surfaced, an assumption got corrected, a prior claim turned out wrong — that's real convergence, and the round count was just the cost of getting there, the same way a legitimately long node-identity call elsewhere in this document isn't a failure just because it took several passes.
-
-Cost: cheap when it fires, and it rarely fires — reuses non-crossing and requirement-response wholesale instead of building new machinery, and the self-trigger means it only runs on exchanges long enough to actually need it.
-
 ## Minimal-basis check (recursive — run last, after every other applicable check has passed)
 
 Why this exists: every check above confirms an argument is valid — sourced (node-sourcing), correctly ordered (non-crossing), acyclic (Jacobian), connected (Laplacian), matching its source (basis-shift), answering what was asked (requirement-response). None of them confirm the argument is minimal. A node can pass every one of those checks individually — properly sourced, in order, no cycle, connected, on-basis — and still be dead weight the argument doesn't need, restating a point already made elsewhere in different words. That's the gap this check closes: not "is this valid" but "does every remaining node still earn its place."
 
-What it catches: redundant nodes that survive every other check clean, one at a time, because those checks were never built to compare a node against the rest of the draft — only against the source or against internal consistency. The Ashley draft earlier in this session is the reference case: the same "population can act, the individual's choice can't" reasoning stated in the opening sentence, again in the "answers the question" sentence, and again in the closing nudge — each instance individually sourced, ordered, acyclic, and on-basis, so nothing upstream flagged it. Only comparing each instance against what remained caught it.
+What it catches: redundant nodes that survive every other check clean, one at a time, because those checks were never built to compare a node against the rest of the draft — only against the source or against internal consistency. The clinical-operations case study is the reference case: "Frontline Staff Stability" duplicates the logical burden of "Nurse Retention" — individually sourced, ordered, acyclic, and on-basis, so nothing upstream flags it on its own. Only comparing each instance against what remains catches it.
 
-Trigger: run once, immediately after requirement-response confirms the full draft satisfies what was asked. That's the one hard dependency — requirement-response gets reused as one of the two recursion tools below, so it has to have already passed once on the uncut draft before any node gets tested for removal, or there's no confirmed baseline to protect against cutting something that was quietly covering a real gap. It does not need to wait on cross-student convergence (a separate pass over the source material, not the reply) or round-count (self-referential to the assistant's own exchange) — neither one touches the reply's node set, so it makes no difference whether either has run yet. This is a closing pass on the response itself, not a substitute for any of the above — it assumes the draft already passes requirement-response and only asks whether it's also minimal.
+Trigger: run once, immediately after requirement-response confirms the full draft satisfies what was asked. That's the one hard dependency — requirement-response gets reused as one of the two recursion tools below, so it has to have already passed once on the uncut draft before any node gets tested for removal, or there's no confirmed baseline to protect against cutting something that was quietly covering a real gap. This is a closing pass on the response itself, not a substitute for any of the above — it assumes the draft already passes requirement-response and only asks whether it's also minimal.
 
 How to run it: take the checked draft's node list. For each node in turn, propose cutting it, then rerun two checks already in this document against the reduced draft — Laplacian (does removing this node disconnect the argument, meaning it was actually a bridge, not filler) and requirement-response (does the reduced draft still fully satisfy what was asked). If both still pass with the node gone, the cut sticks — that node was genuine dead weight. If either fails, restore the node and move to the next candidate. Once a full pass is complete, repeat it on the reduced draft — cutting one node can reveal a second one is now also droppable, or can turn a previously-safe node into a now-necessary bridge, so a single pass isn't sufficient. Stop when one full pass produces zero cuts — that's the fixed point, and what's left is the minimal set.
 
-Worked example: the Nykia CITI-boundary email, run clause by clause. One candidate looked like a likely cut on sight — "it has to be self-directed" sits right next to the boundary statement it seems to restate. Cutting it failed the Laplacian test: without it, "the same as everyone else, who downloaded their term plan..." has nothing to attach to — the clause was the bridge connecting the boundary to the fairness point, not a restatement of either. Every other clause failed requirement-response on removal (each was explicit required content). Full pass, zero cuts, fixed point on the first try — confirmation that the manual trimming done across earlier rounds had already found the minimal draft, not a failure of this check to find anything.
+Worked example: take a short reply, run clause by clause. One clause looks like a likely cut on sight — a qualifying phrase that seems to restate the sentence right before it. Cutting it fails the Laplacian test: without it, the next clause has nothing to attach to — the phrase was actually the bridge connecting two points, not a restatement of either. Every other clause fails requirement-response on removal (each is explicit required content). Full pass, zero cuts, fixed point on the first try — confirmation the draft was already minimal, not a failure of the check to find anything.
 
 In butchery terms: every other check confirms the animal is sound. This is the pass that keeps cutting until no more dead weight comes off — what's left on the block at that point are the succulent bits: connective tissue and load-bearing muscle, not the trim.
 
@@ -681,11 +563,11 @@ What it catches: a node that ends up positioned differently than an idealized ve
 How to run it:
 1. Take the final node set, after every other check has already run and minimal-basis has already cut whatever it was going to cut. This check never adds or removes a node — same set both trees.
 2. Build the actual tree: walk the real reading order and simulate splay operations — first mention of a node is an insert, any later return to that same node is an access, which splays it back to the root. The resulting shape reflects what the piece actually did. Splay, not a balanced tree like red-black — a red-black tree stays indifferent to access frequency by design, which would erase the exact signal this check needs. Splay pulls a repeatedly-touched node toward the root precisely because it was touched again, which is what lets a hub surface on its own.
-3. Build the Oracle's tree from the same nodes, treating each spoke as an anonymous position — Author 1, Author 2, Author 3 — never by what any citation specifically argues. Using the established pattern for this kind of writing — an explicit schema where one exists (a day-recap's meals/work/family-logistics buckets), or the pattern already demonstrated by clean examples of the same genre (a mentor reply's hub, touched again after every spoke, with the close echoing whichever spoke was touched last) — place each node where that pattern says it belongs, based on role and position only.
+3. Build the Oracle's tree from the same nodes, treating each spoke as an anonymous position — Author 1, Author 2, Author 3 — never by what any citation specifically argues. Using the established pattern for this kind of writing — an explicit schema where one exists (a day-recap's meals/work/family-logistics buckets), or the pattern already demonstrated by clean examples of the same genre (a reply's hub, touched again after every spoke, with the close echoing whichever spoke was touched last) — place each node where that pattern says it belongs, based on role and position only.
 4. Take the shift: compare the two trees node by node.
 5. Read it: a sound piece comes back sparse, close to flat. Any real, concentrated mass in the shift points at exactly the node that drifted, and where.
 
-Worked examples: four of five mentor replies close by echoing whichever citation was touched last — matches the Oracle, flat shift. One doesn't — its last-touched node never gets echoed again, and the close reaches back to two earlier ones instead — shift concentrates entirely on the orphaned node. Separately, "I ate breakfast, it was good, my work was bad, and I lost money on shares" — breakfast and work land inside the established meals/work schema cleanly; shares has no bucket in that schema at all, and the shift concentrates there.
+Worked examples: four of five sample replies close by echoing whichever point was touched last — matches the Oracle, flat shift. One doesn't — its last-touched node never gets echoed again, and the close reaches back to two earlier ones instead — shift concentrates entirely on the orphaned node. Separately, "I ate breakfast, it was good, my work was bad, and I lost money on shares" — breakfast and work land inside the established meals/work schema cleanly; shares has no bucket in that schema at all, and the shift concentrates there.
 
 Limits: needs a real Oracle to compare against, and building one is a judgment call, same footing as basis-shift's own basis or external dependency's real-world knowledge — this check can't bootstrap that from nothing. It needs a light touch of content to work at all — recognizing which earlier node a later line is about requires reading enough to place it. What it stays blind to is whether that content is any good — a citation-bridge can be a total stretch and still land in exactly the position the Oracle expects, because this check only ever asks where, never whether. Only meaningful on the already-pruned final graph — run any earlier and it just re-detects problems the prior layers exist to catch.
 
