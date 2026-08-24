@@ -14,8 +14,8 @@ You do not need to write any custom code or maintain a software pipeline to use 
 
 1. **Prime the LLM**: Upload the `tj_plus_plus_whitepaper_v45.pdf` or the `TJ++_Revised.md` specification file directly into your LLM's chat window (or paste the text if you prefer).
 2. **Confirm Compilation**: Wait for the LLM to acknowledge the paper's mathematical definitions and logic layers.
-3. **Execute the Audit**: Paste your text and run the following command:
-   > *"Let's TJ++ the following draft paragraph."*
+3. **Execute the Audit**: Paste or upload your text/documents and run the following command:
+   > *"Let's TJ++ this."*
 
 ---
 
